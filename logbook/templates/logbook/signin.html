@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<title>Sign page</title>
+<html>
+  <head>
+    <title>Login Page</title>
+    <style>
+      /* CSS styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #666;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+      }
+
+      input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+
+
+  <form method="POST" >
+    {% csrf_token %}
+
+  <body>
+    <form action="#" method="post">
+      <h2>signin</h2>
+    <label>username</label>
+    <input type="text" placeholder="username"  name="username" id="username">
+    <label>password</label>
+    <input type="password" placeholder="password1"  name="pass1" id="pass1">
+
+    <label> confirm password</label>
+    <input type="password" placeholder="password2"  name="pass2" id="pass2">
+
+    <button input="submit" value="sighnin"> signin </button>
+
+    <div class="login">
+    <p>Have an account <a a href='login'>Login</a></p>
+    </form>
+  </body>
+  
+
+
+    
+</div>
+</form>
+</html>
+

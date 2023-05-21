@@ -1,0 +1,41 @@
+{% extends 'logbook/base.html' %}
+{% block content  %}
+<title>Profile page</title>
+<h1>This is the profile page for     {{user.username}}</h1>
+{% if user.logbook_Items_user.image %}
+
+<img class='profile-image' src="{{ request.user.profile.image.url }}" alt="" class="rounded-circle" height="60px">
+{% else%}
+<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagSIpNvrU1N3lvzrWDoSf5oJzABckJ3HbMw&usqp=CAU' ,  height="30px">
+{% endif %}
+{{Items.username}}
+<h1>{{user.logbook_Follow_follower.count}}</h1>
+<h1>{{user.logbook_Follow_following.count}}</h1>
+{{user.logbook_Items_user.desc}}
+<a href="/profile">edit</a>
+
+
+
+
+<main>
+    <div class="graphics">
+        <img class='graphic-img' src="/static/images/profile-graphic.svg" alt="">
+    </div>
+
+    <div class="profile-info">
+
+        <div class="user-profile-image-box">
+            <form class="user-profile-image-box"     action="#">
+                <label for="img"><img class='profile-image' src="{{ request.user.profile.image.url }}" alt="" class="rounded-circle" height="30px"></label>
+                <input style="  visibility:hidden; width:0; height:0" type="file" id="img" name="img" accept="image/*">
+                <input type="submit">
+              </form>
+        </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+{% endblock %}
+

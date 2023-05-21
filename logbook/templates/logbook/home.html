@@ -1,0 +1,71 @@
+{% extends 'logbook/base.html' %}
+{% block content  %}
+<title>Home page</title>
+<style>
+
+
+  .post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .post img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+  }
+  .like-button {
+  background-color: red; /* Choose your preferred color */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.like-button:hover {
+  background-color:chartreuse /* Choose your preferred hover color */
+}
+</style>
+<p>
+ 
+{% if search %}
+      {% for user in results %}
+       <p><h1><a href="user_other/{{ user.username }}/"><h6>{{ user.username }}</h6></a></h1></p>
+      {% endfor %}
+     
+
+{% else %}
+
+
+{% endif %}
+</p>
+
+<p>
+  <h1> Welcome to the Insta-clone </h1></p>
+  <body>
+
+
+  <main>
+      <div class="post">
+          {% for i in form %}
+          <img class='post-image' src="{{ i.image.url }}">
+          <h2>
+            {% if post.pk in liked_post_list %}
+          <button class="like-button"><span class="like-icon"><a href="/liked/{{ post.pk }}"></a></span>Like</button> &nbsp;&nbsp; post by {{ i.author }}  &nbsp;&nbsp; caption:{{ i.caption }} </h2>
+            {% else %}
+          <button class="like-button"><span class="like-icon"><a href="/liked/{{ post.pk }}"></a></span>Like</button> &nbsp;&nbsp; post by {{ i.author }}  &nbsp;&nbsp; caption:{{ i.caption }} </h2>
+          {% endif %}
+        {% endfor %} 
+        
+
+        
+
+
+{% endblock   %}

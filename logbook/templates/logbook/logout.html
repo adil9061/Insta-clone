@@ -1,0 +1,60 @@
+{% extends 'logbook/base.html' %}
+{% block content  %}
+<!DOCTYPE html>
+<title>Logout Page</title>
+<html>
+	
+<head>
+	<title>Logout Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+
+		.container {
+			background-color: #fff;
+			margin: 50px auto;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			text-align: center;
+			max-width: 500px;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin-bottom: 10px;
+			color: #333333;
+		}
+
+		p {
+			font-size: 18px;
+			margin-bottom: 20px;
+			color: #666666;
+		}
+
+		a {
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #000100;
+			color: #ffffff;
+			text-decoration: none;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		a:hover {
+			background-color: #555555;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Logged out successfully!</h1>
+		<p>You have been logged out of your account.</p>
+		<a href=''>Return to main page</a>
+	</div>
+</body>
+</html>
+{% endblock %}

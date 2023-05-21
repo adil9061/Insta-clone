@@ -1,0 +1,37 @@
+{% extends 'logbook/base.html' %}
+{% block content  %}
+<style>
+
+
+.post {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.post img {
+	width: 60%;
+	height: auto;
+	object-fit: cover;
+}
+
+
+
+</style>
+<body>
+<main>
+    <div class="post">
+        {% for i in form %}
+        <img class='profile-image' src="{{ i.image.url }}">
+        <h2>post by {{ i.author }}  &nbsp;&nbsp; caption:{{ i.caption }}</h2>
+
+        {% endfor %}
+    </div>
+
+
+
+<h1>akyustb kuysgfveutfvuysfbf</h1>
+{% endblock %}
+</main>
+</body>
